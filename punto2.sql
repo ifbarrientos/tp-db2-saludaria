@@ -7,9 +7,9 @@ USE centro;
 
 create table paciente (nombre char(16), apellido char(16), dni int, telefono char(12), mail char(20));
 
-create table obra_social (nombre char(16), cuit int, plan enum);
+create table obra_social (nombre char(16), cuit int, plan ENUM('estandar', 'plata', 'oro', 'platino'));
 
-create table turno (fecha date, estado enum);
+create table turno (fecha date, estado ENUM('confirmado', 'reservado', 'cancelado'));
 
 create table medico (nombre char(16), apellido char(16), dni int, telefono char(12));
 
