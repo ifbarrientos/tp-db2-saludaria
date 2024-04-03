@@ -21,7 +21,7 @@ create table equipo_medico (nombre char(20), id int);
 
 create table agenda (franja_inicio DATETIME, franja_fin DATETIME);
 
-create table centro (nombre char(20), direccion char(20), telefono char(12), id int);
+create table centro (nombre char(30), direccion char(30), telefono char(12), id int);
 
 -- Inserts...
 
@@ -32,7 +32,7 @@ insert into paciente values ('John', 'Doe', 123456789, '1125746963', 'doejohn@gm
 
 insert into obra_social values ('Galeno', 2042947954, 'estandar');
 
-insert into obra_social values ('OSDE', 5012345678900, 'oro');
+insert into obra_social values ('OSDE', 501234500, 'oro');
 
 
 insert into turno values ('2024/04/12', 'reservado');
