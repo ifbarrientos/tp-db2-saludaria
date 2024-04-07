@@ -95,8 +95,8 @@ insert into equipo_medico values ('Radiologia_1', 4);
 insert into equipo_medico values ('Tomografia_1', 5);
 insert into equipo_medico values ('Ecografia_1', 6);
 
-insert into servicio_medico values ('Ecografia', 1, 1);
-insert into servicio_medico values ('Tomografia', 2, 2);
-insert into servicio_medico values ('Radiologia', 3, 3);
+insert into servicio_medico values ('Ecografia', 1, 6);
+insert into servicio_medico values ('Tomografia', 2, 5);
+insert into servicio_medico values ('Radiologia', 3, 4);
 
 insert into centro values ('Sede Malvinas Argentinas', 'Jose María Gütierrez 1150', 1168476247, 1);
