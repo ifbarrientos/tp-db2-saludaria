@@ -4,6 +4,14 @@ CREATE DATABASE centro;
 USE centro;
 
 -- Creación de tablas
+create table obra_social (
+    nombre char(16), 
+    cuit int, 
+    plan ENUM(
+        'estandar', 'plata', 'oro', 'platino'
+    ),
+    PRIMARY KEY (cuit)
+);
 
 create table paciente (
     nombre char(16), 
@@ -16,13 +24,11 @@ create table paciente (
     FOREIGN KEY (cuit) REFERENCES obra_social(cuit)
 );
 
-create table obra_social (
-    nombre char(16), 
-    cuit int, 
-    plan ENUM(
-        'estandar', 'plata', 'oro', 'platino'
-    )
-    PRIMARY KEY (cuit)
+create table agenda (
+    franja_inicio DATETIME, 
+    franja_fin DATETIME
+    id int,
+    PRIMARY KEY(id)
 );
 
 create table turno (
@@ -44,6 +50,12 @@ create table medico (
     PRIMARY KEY (dni)
 );
 
+create table equipo_medico (
+    nombre char(20), 
+    id int,
+    PRIMARY KEY (id)
+);
+
 create table servicio_medico (
     nombre ENUM(
         'Ecografia', 'Tomografia', 'Radiologia'
@@ -52,19 +64,6 @@ create table servicio_medico (
     equipo_asignado int,
     PRIMARY KEY (id),
     FOREIGN KEY (equipo_asignado) REFERENCES equipo_medico(id)
-);
-
-create table equipo_medico (
-    nombre char(20), 
-    id int,
-    PRIMARY KEY (id)
-);
-
-create table agenda (
-    franja_inicio DATETIME, 
-    franja_fin DATETIME
-    id int,
-    PRIMARY KEY(id)
 );
 
 create table centro (
