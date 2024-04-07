@@ -77,40 +77,26 @@ create table centro (
 -- Inserts...
 
 insert into obra_social values ('Galeno', 242947954, 'estandar');
-
 insert into obra_social values ('OSDE', 312345678, 'oro');
 
-
 insert into paciente values ('Ignacio', 'Barrientos', 42947954, 242947954, '1164925997', 'ifbarrientos@outlook.com');
-
 insert into paciente values ('John', 'Doe', 12345678, 312345678, '1125746963', 'doejohn@gmail.com');
-
-
-insert into turno values ('2024-04-12', 'reservado', 1);
-
-insert into turno values ('2024-04-15', 'cancelado', 2);
-
-
-insert into medico values ('Jane', 'Doe', 987654321, '1167983554');
-
-insert into medico values ('Luis', 'Lopez', 628447806, '1164352964');
-
-
-insert into servicio_medico values ('Ecografia', 1);
-
-insert into servicio_medico values ('Tomografia', 2);
-
-insert into servicio_medico values ('Radiologia', 3);
-
-
-insert into equipo_medico values ('Radiologia_1', 4);
-
-insert into equipo_medico values ('Tomografia_1', 5);
-
-insert into equipo_medico values ('Ecografia_1', 6);
-
 
 insert into agenda values ('2024-04-12 08:00:00', '2024-04-12 14:00:00', 1);
 insert into agenda values ('2024-04-15 08:00:00', '2024-04-12 14:00:00', 2);
+
+insert into turno values ('2024-04-12', 'reservado', 1, 1);
+insert into turno values ('2024-04-15', 'cancelado', 2, 2);
+
+insert into medico values ('Jane', 'Doe', 987654321, '1167983554');
+insert into medico values ('Luis', 'Lopez', 628447806, '1164352964');
+
+insert into equipo_medico values ('Radiologia_1', 4);
+insert into equipo_medico values ('Tomografia_1', 5);
+insert into equipo_medico values ('Ecografia_1', 6);
+
+insert into servicio_medico values ('Ecografia', 1, 1);
+insert into servicio_medico values ('Tomografia', 2, 2);
+insert into servicio_medico values ('Radiologia', 3, 3);
 
 insert into centro values ('Sede Malvinas Argentinas', 'Jose María Gütierrez 1150', 1168476247, 1);
